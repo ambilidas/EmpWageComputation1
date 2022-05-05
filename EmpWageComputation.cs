@@ -12,11 +12,14 @@ namespace EmpWageComputation1
         public const int IS_PART_TIME = 1;
         public const int IS_FULL_TIME = 2;
         public const int WAGE_PER_HOUR = 20;
-        public const int NUM_OF_WORKING_DAYS = 20;
+        public const int MAX_WORKING_DAYS = 20;
+        public const int MAX_WORKING_HOURS = 100;
 
         int emphr = 0;
         int empwage = 0;
         int totalempwage=0;
+        int totalempHr = 0;
+        int TotalWorkingDays=0;
         Random random = new Random();
 
 
@@ -24,8 +27,9 @@ namespace EmpWageComputation1
         public void EmpAttendance()
         {
             
-            for (int day = 0; day < NUM_OF_WORKING_DAYS; day++)
+            while(TotalWorkingDays< MAX_WORKING_DAYS && totalempHr< MAX_WORKING_HOURS)
             {
+                TotalWorkingDays++;
                 int empcheck = random.Next(0, 3);
                 switch (empcheck)
                 {
@@ -39,16 +43,19 @@ namespace EmpWageComputation1
                         emphr = 0;
                         break;
                 }
-
+                totalempHr += emphr;
                 empwage = emphr * WAGE_PER_HOUR;
-                Console.WriteLine("Employee Daily Wage: {0}", empwage);
-                totalempwage += empwage;
+                //Console.WriteLine("Employee Daily Wage: {0}", empwage);
+                
+                Console.WriteLine("Day :" +TotalWorkingDays + "Employee Hours :"+ totalempHr);
             }
 
         }
         public void EmpWageCalc()
         {
+            totalempwage = totalempHr * WAGE_PER_HOUR;
             Console.WriteLine("Total employee wage:{0}",totalempwage);
+
         }
 
 
