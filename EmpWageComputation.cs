@@ -45,9 +45,9 @@ namespace EmpWageComputation1
                 }
                 totalempHr += emphr;
                 empwage = emphr * WAGE_PER_HOUR;
-                //Console.WriteLine("Employee Daily Wage: {0}", empwage);
+                Console.WriteLine("\nEmployee Daily Wage: {0}", empwage);
                 
-                Console.WriteLine("Day :" +TotalWorkingDays + "Employee Hours :"+ totalempHr);
+                Console.WriteLine("Day: " +TotalWorkingDays + "  Employee Hours :"+ totalempHr);
             }
 
         }
@@ -57,8 +57,5 @@ namespace EmpWageComputation1
             Console.WriteLine("Total employee wage:{0}",totalempwage);
 
         }
-
-
-
     }
 }
