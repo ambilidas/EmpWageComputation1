@@ -24,7 +24,7 @@ namespace EmpWageComputation1
 
 
 
-        public void EmpAttendance()
+        public void EmpWageCalc()
         {
             
             while(TotalWorkingDays< MAX_WORKING_DAYS && totalempHr< MAX_WORKING_HOURS)
@@ -46,16 +46,13 @@ namespace EmpWageComputation1
                 totalempHr += emphr;
                 empwage = emphr * WAGE_PER_HOUR;
                 Console.WriteLine("\nEmployee Daily Wage: {0}", empwage);
-                
-                Console.WriteLine("Day: " +TotalWorkingDays + "  Employee Hours :"+ totalempHr);
+               
             }
-
-        }
-        public void EmpWageCalc()
-        {
+            Console.WriteLine("\nTotal Working Days: " + TotalWorkingDays + "  Total Employee Hours :" + totalempHr);
             totalempwage = totalempHr * WAGE_PER_HOUR;
-            Console.WriteLine("Total employee wage:{0}",totalempwage);
+            Console.WriteLine("Total employee wage:{0}", totalempwage);
 
         }
+       
     }
 }
