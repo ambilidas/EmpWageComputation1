@@ -8,13 +8,14 @@ namespace EmpWageComputation1
         {
             Console.WriteLine("Welcome To Employee Wage Computation Program");
             //create seperate objects for each companies
-            EmpWageComputation reliance = new EmpWageComputation();
-            Console.WriteLine("\nWage computation for reliance "); 
-            reliance.EmpWageCalc(25,22,70);
-            Console.WriteLine("\nWage computation for GMart ");
-            EmpWageComputation GMart=new EmpWageComputation();
-            GMart.EmpWageCalc(30, 25, 100);
-
+            EmpWageBuilder company1 = new EmpWageBuilder("Reliance",20,100,100);
+            EmpWageBuilder company2 = new EmpWageBuilder("TATA", 30, 120, 80);
+            EmpWageBuilder company3 = new EmpWageBuilder("Infosys", 45, 90, 70);
+            company1.EmpWageCalc();
+            Console.WriteLine("------------------------------------------------------------");
+            company2.EmpWageCalc();
+            Console.WriteLine("------------------------------------------------------------");
+            company3.EmpWageCalc();
         }
     }
 }
