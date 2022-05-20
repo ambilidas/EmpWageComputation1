@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace EmpWageComputation1
 {
-    internal class EmpWageBuilder
+    public class EmpWageBuilder
     {
         public const int IS_PART_TIME = 1;
         public const int IS_FULL_TIME = 2;
 
-        string companyName;
-        int empWagePerHr;
-        int MaxWorkingDays;
-        int MaxWorkingHours;
+        public string companyName;
+        public int empWagePerHr;
+        public int MaxWorkingDays;
+        public int MaxWorkingHours;
         Random random = new Random();
 
         //constructor
